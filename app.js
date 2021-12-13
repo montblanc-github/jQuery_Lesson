@@ -25,4 +25,26 @@
 //   $(".box1").slideUp();
 // });
 
-// 
+// 非表示の要素をjQueryで表示させる→cssにdisplay:noneを追加
+// $(function () {
+//   $(".box1").show();
+//   $(".box1").css({ "background-color": "#0000FF" });
+// });
+
+// 表示されている要素をjQueryで非表示にする→cssのdisplay:noneは不要
+// $(function () {
+//   $(".box1").hide();
+// });
+
+// 確認問題
+$(function () {
+  $(".box1").slideDown(function () {
+    $(".box1")
+      .css({
+        "background-color": "#0000FF",
+        width: "200px",
+        height: "100px",
+      })
+      .slideUp();
+  });
+});
