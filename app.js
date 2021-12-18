@@ -50,11 +50,37 @@
 // });
 
 // 6章学習内容
+// $(function(){
+//   $('.box1').on('click', function(){
+//     $('.box1').addClass('box1-ext');
+//   });
+//   $('.box1').mouseout(function(){
+//     $('.box1').removeClass('box1-ext');
+//   });
+// });
+
+// 7章学習内容
+// $(function(){
+//   $('.bg1').on('click', function(){
+//     $('.bg1').slideUp();
+//   });
+
+//   $('.bg2').on('click', function(){
+//     $('.bg2').slideUp();
+//   });
+
+//   $('.bg3').on('click', function(){
+//     $('.bg3').slideUp();
+//   });
+
+//   $('.bg4').on('click', function(){
+//     $('.bg4').slideUp();
+//   });
+// });
+
+// 上記方法ではコードが煩雑になるため、下記のように、thisを用いる。
 $(function(){
   $('.box1').on('click', function(){
-    $('.box1').addClass('box1-ext');
-  });
-  $('.box1').mouseout(function(){
-    $('.box1').removeClass('box1-ext');
+    $(this).slideUp();
   });
 });
