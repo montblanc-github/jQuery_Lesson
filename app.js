@@ -79,8 +79,15 @@
 // });
 
 // 上記方法ではコードが煩雑になるため、下記のように、thisを用いる。
+// $(function(){
+//   $('.box1').on('click', function(){
+//     $(this).slideUp();
+//   });
+// });
+
+// children
 $(function(){
-  $('.box1').on('click', function(){
-    $(this).slideUp();
+  $('button').on('click', function(){
+    $('ul').children().css('color','red');
   });
 });
